@@ -1,11 +1,11 @@
 "use strict";
 
-module.exports.hello = async event => {
+module.exports.welcome = async event => {
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: "Hello From the Serverless function AWS Lambda",
+        message: "Welcome to the Serverless function AWS Lambda!",
       },
       null,
       2

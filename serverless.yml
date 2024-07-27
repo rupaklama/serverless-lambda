@@ -24,6 +24,7 @@ service: learning
 provider:
   name: aws
   runtime: nodejs18.x
+  # environment: variables
 
 # you can overwrite defaults here
 #  stage: dev
@@ -60,15 +61,15 @@ provider:
 #    - include-me-dir/**
 
 functions:
-  hello:
-    handler: lambdas/src/handler.hello
+  welcome:
+    handler: src/lambdas/handler.welcome
     events:
       - http:
-          path: hello
+          path: welcome
           method: get
           cors: true
   checkEvent:
-    handler: lambdas/src/handler.checkEvent
+    handler: src/lambdas/handler.checkEvent
     events:
       - http:
           path: checkEvent
